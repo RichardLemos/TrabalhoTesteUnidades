@@ -1,0 +1,5 @@
+Duas classes: Calculadora e testes.
+
+Criança <= 20
+Adulto <= 65
+Idoso > 65
