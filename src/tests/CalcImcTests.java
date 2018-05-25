@@ -1,6 +1,5 @@
 package tests;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -101,7 +100,7 @@ public class CalcImcTests {
 	@Test
 	public void testeAdultoBaixoPesoMuitoGrave() 
 	{
-		Assert.assertEquals("Baixo peso muito grave", calc.calcularImc(1.75, 48.00, "masculino", 35));
+		Assert.assertEquals("Baixo peso muito grave", calc.calcularImc(1.75, 48.00, "feminino", 35));
 	}
 	
 	@Test
@@ -113,7 +112,7 @@ public class CalcImcTests {
 	@Test
 	public void testeAdultoBaixoPeso() 
 	{
-		Assert.assertEquals("Baixo peso", calc.calcularImc(1.70, 50.00, "masculino", 36));
+		Assert.assertEquals("Baixo peso", calc.calcularImc(1.70, 50.00, "feminino", 36));
 	}
 	
 	@Test
@@ -126,7 +125,7 @@ public class CalcImcTests {
 	public void testeAdultoSobrepeso() 
 	{
 		// Observação: Apresenta erro quando executado com o sexo "feminino", porém, a condição possui sexo feminino e masculino como válido.
-		Assert.assertEquals("Sobrepeso", calc.calcularImc(1.73, 77.00, "masculino", 36));
+		Assert.assertEquals("Sobrepeso", calc.calcularImc(1.73, 77.00, "feminino", 36));
 	}
 	
 	@Test
@@ -138,7 +137,7 @@ public class CalcImcTests {
 	@Test
 	public void testeAdultoObesidadeSegundoGrau() 
 	{
-		Assert.assertEquals("Obesidade grau II", calc.calcularImc(1.80, 115.00, "masculino", 36));
+		Assert.assertEquals("Obesidade grau II", calc.calcularImc(1.80, 115.00, "feminino", 36));
 	}
 	
 	@Test
@@ -153,6 +152,6 @@ public class CalcImcTests {
 	public void testeMeninoBaixoPeso() 
 	{
 		// Observação: Apresenta erro, porém, o código está correto e os dados de entrada se encaixam corretamente com o resultado esperado.
-		Assert.assertEquals("Baixo peso", calc.calcularImc(1.77, 43.00, "masculino", 19));
+		Assert.assertEquals("Baixo peso", calc.calcularImc(1.77, 43.00, "masculino", 2));
 	}
 }

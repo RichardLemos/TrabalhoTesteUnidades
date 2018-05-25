@@ -94,55 +94,55 @@ public class CalculadoraImc {
 		// Índice de massa corporal para adultos entre 20 e 65 anos ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 		
 		// testeAdultoBaixoPesoMuitoGrave
-		else if (imc < 16 && sexo.equals("masculino") || sexo.equals("feminino") && idade >= 20 && idade <= 65)
+		else if (imc < 16 &&   idade >= 20 && idade <= 65 && (sexo.equals("masculino") || sexo.equals("feminino")))
 		{
 			
 			return "Baixo peso muito grave";
 		}
 		
 		// testeAdultoBaixoPesoGrave
-		else if (imc >= 16 && imc <= 16.99 && sexo.equals("masculino") || sexo.equals("feminino") && idade >= 20 && idade <= 65)
+		else if (imc >= 16 && imc <= 16.99 && idade >= 20 && idade <= 65 &&  (sexo.equals("masculino") || sexo.equals("feminino")))
 		{
 			
 			return "Baixo peso grave";
 		}
 		
 		// testeAdultoBaixoPeso
-		else if (imc >= 17 && imc <= 18.49 && sexo.equals("masculino") || sexo.equals("feminino") && idade >= 20 && idade <= 65)
+		else if (imc >= 17 && imc <= 18.49 && idade >= 20 && idade <= 65 && (sexo.equals("masculino") || sexo.equals("feminino")))
 		{
 			
 			return "Baixo peso";
 		}
 		
 		// testeAdultoPesoNormal
-		else if (imc >= 18.50 && imc <= 24.99 && sexo.equals("masculino") || sexo.equals("feminino") && idade >= 20 && idade <= 65)
+		else if (imc >= 18.50 && imc <= 24.99 && idade >= 20 && idade <= 65 && (sexo.equals("masculino") || sexo.equals("feminino")))
 		{
 			
 			return "Peso normal";
 		}
 		
 		// testeAdultoSobrepeso
-		else if (imc >= 25 && imc <= 29.99 && sexo.equals("masculino") || sexo.equals("feminino") && idade >= 20 && idade <= 65)
+		else if (imc >= 25 && imc <= 29.99  && idade >= 20 && idade <= 65 && (sexo.equals("masculino") || sexo.equals("feminino")))
 		{
 			
 			return "Sobrepeso";
 		}
 		
 		// testeAdultoObesidadePrimeiroGrau
-		else if (imc >= 30 && imc <= 34.99 && sexo.equals("masculino") || sexo.equals("feminino") && idade >= 20 && idade <= 65)
+		else if (imc >= 30 && imc <= 34.99 && idade >= 20 && idade <= 65 && (sexo.equals("masculino") || sexo.equals("feminino")))
 		{
 			
 			return "Obesidade grau I";
 		}
 		 // testeAdultoObesidadeSegundoGrau
-		else if (imc >= 35 && imc <= 39.99 && sexo.equals("masculino") || sexo.equals("feminino") && idade >= 20 && idade <= 65)
+		else if (imc >= 35 && imc <= 39.99  && idade >= 20 && idade <= 65 && (sexo.equals("masculino") || sexo.equals("feminino")))
 		{
 			
 			return "Obesidade grau II";
 		}
 		
 		// testeAdultoObesidadeTerceiroGrau
-		else if (imc >= 40 && sexo.equals("masculino") || sexo.equals("feminino") && idade >= 20 && idade <= 65)
+		else if (imc >= 40 && idade >= 20 && idade <= 65 && (sexo.equals("masculino") || sexo.equals("feminino")))
 		{
 			
 			return "Obesidade grau III (obesidade mórbida)";
@@ -152,7 +152,7 @@ public class CalculadoraImc {
 		else if (imc < 14 && sexo.equals("masculino") && idade >= 2 && idade <= 20) // Dados de acordo com o gráfico do site
 		{
 			
-			return "Baixo Peso";
+			return "Baixo peso";
 		}
 		
 		// Condição de saída
