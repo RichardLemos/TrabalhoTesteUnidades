@@ -10,7 +10,8 @@ public class CalcImcTests {
 
 	CalculadoraImc calc;
 
-	// @Before - Anotação que indica o método que será executado toda vez antes de
+	// @Before - Anotação que indica o método que será executado toda vez antes
+	// de
 	// qualquer caso de teste ser executado.
 	@Before
 	public void setup() {
@@ -19,10 +20,11 @@ public class CalcImcTests {
 		calc = new CalculadoraImc();
 	}
 
-	// Índice de massa corporal para homens acima de 65 anos
 	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	// Índice de massa corporal para homens acima de 65 anos
 
-	// @Test - Anotação JUnit que indica os métodos que serão testados nos casos de
+	// @Test - Anotação JUnit que indica os métodos que serão testados nos casos
+	// de
 	// teste.
 	@Test
 	public void testeIdosoHomemBaixoPeso() {
@@ -54,8 +56,8 @@ public class CalcImcTests {
 		Assert.assertEquals("Obesidade grau III (obesidade mórbida)", calc.calcularImc(1.70, 119.00, "masculino", 66));
 	}
 
-	// Índice de massa corporal para mulheres acima de 65 anos
 	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	// Índice de massa corporal para mulheres acima de 65 anos
 
 	@Test
 	public void testeIdosaMulherBaixoPeso() {
@@ -87,8 +89,8 @@ public class CalcImcTests {
 		Assert.assertEquals("Obesidade grau III (obesidade mórbida)", calc.calcularImc(1.65, 115.00, "feminino", 66));
 	}
 
-	// Índice de massa corporal para adultos entre 20 e 65 anos
 	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	// Índice de massa corporal para adultos entre 20 e 65 anos
 
 	@Test
 	public void testeAdultoBaixoPesoMuitoGrave() {
@@ -112,8 +114,6 @@ public class CalcImcTests {
 
 	@Test
 	public void testeAdultoSobrepeso() {
-		// Observação: Apresenta erro quando executado com o sexo "feminino", porém, a
-		// condição possui sexo feminino e masculino como válido.
 		Assert.assertEquals("Sobrepeso", calc.calcularImc(1.73, 77.00, "feminino", 36));
 	}
 
@@ -132,9 +132,10 @@ public class CalcImcTests {
 		Assert.assertEquals("Obesidade grau III (obesidade mórbida)", calc.calcularImc(1.60, 110.00, "masculino", 36));
 	}
 
-	// Índice de massa corporal para meninos
 	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+	// Índice de massa corporal para meninos
+	
+	// Idade 2
 	@Test
 	public void testeMeninoIdadeDoisImcQuatorze() {
 		Assert.assertEquals("Baixo peso", calc.calcularImc(1.110, 17.25, "masculino", 2));
@@ -146,7 +147,7 @@ public class CalcImcTests {
 	}
 
 	@Test
-	public void testeMeninoIdadeDoisImcDezoite() {
+	public void testeMeninoIdadeDoisImcDezoito() {
 
 		Assert.assertEquals("Sobrepeso", calc.calcularImc(1.10, 21.79, "masculino", 2));
 	}
@@ -156,7 +157,8 @@ public class CalcImcTests {
 
 		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "masculino", 2));
 	}
-
+	
+	// Idade 4
 	@Test
 	public void testeMeninoIdadeQuatroImcQuatorze() {
 
@@ -174,7 +176,8 @@ public class CalcImcTests {
 
 		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "masculino", 4));
 	}
-
+	
+	// Idade 6
 	@Test
 	public void testeMeninoIdadeSeisImcQuatorze() {
 
@@ -198,7 +201,8 @@ public class CalcImcTests {
 
 		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "masculino", 6));
 	}
-
+	
+	// Idade 8
 	@Test
 	public void testeMeninoIdadeOitoImcQuatorze() {
 
@@ -222,7 +226,8 @@ public class CalcImcTests {
 
 		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "masculino", 8));
 	}
-
+	
+	// Idade 10
 	@Test
 	public void testeMeninoIdadeDezImcQuatorze() {
 
@@ -246,7 +251,8 @@ public class CalcImcTests {
 
 		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "masculino", 10));
 	}
-
+	
+	// Idade 12
 	@Test
 	public void testeMeninoIdadeDouzeImcQuatorze() {
 
@@ -270,7 +276,8 @@ public class CalcImcTests {
 
 		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "masculino", 12));
 	}
-
+	
+	// Idade 14
 	@Test
 	public void testeMeninoIdadeQuatorzeImcQuatorze() {
 
@@ -294,7 +301,8 @@ public class CalcImcTests {
 
 		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "masculino", 14));
 	}
-
+	
+	// Idade 16
 	@Test
 	public void testeMeninoIdadeDezesseisImcQuatorze() {
 
@@ -318,7 +326,8 @@ public class CalcImcTests {
 
 		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "masculino", 16));
 	}
-
+	
+	// Idade 18
 	@Test
 	public void testeMeninoIdadeDezoitoImcQuatorze() {
 
@@ -342,7 +351,8 @@ public class CalcImcTests {
 
 		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "masculino", 18));
 	}
-
+	
+	// Idade 20
 	@Test
 	public void testeMeninoIdadeVinteImcQuatorze() {
 
@@ -367,4 +377,236 @@ public class CalcImcTests {
 		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "masculino", 20));
 	}
 
+	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	// Índice de massa corporal para meninas
+	
+	// Idade 2
+	@Test
+	public void testeMeninaIdadeDoisImcQuatorze() {
+		Assert.assertEquals("Baixo peso", calc.calcularImc(1.110, 17.25, "feminino", 2));
+	}
+
+	@Test
+	public void testeMeninaIdadeDoisImcDezesseis() {
+		Assert.assertEquals("Peso normal", calc.calcularImc(1.14, 20.82, "feminino", 2));
+	}
+
+	@Test
+	public void testeMeninaIdadeDoisImcDezoito() {
+
+		Assert.assertEquals("Sobrepeso", calc.calcularImc(1.10, 21.79, "feminino", 2));
+	}
+
+	@Test
+	public void testeMeninaIdadeDoisImcVinte() {
+
+		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "feminino", 2));
+	}
+	
+	// Idade 4
+	@Test
+	public void testeMeninaIdadeQuatroImcQuatorze() {
+		Assert.assertEquals("Baixo peso", calc.calcularImc(1.110, 17.25, "feminino", 4));
+	}
+
+	@Test
+	public void testeMeninaIdadeQuatroImcDezesseis() {
+		Assert.assertEquals("Peso normal", calc.calcularImc(1.14, 20.82, "feminino", 4));
+	}
+
+	@Test
+	public void testeMeninaIdadeQuatroImcDezoito() {
+
+		Assert.assertEquals("Sobrepeso", calc.calcularImc(1.10, 21.79, "feminino", 4));
+	}
+
+	@Test
+	public void testeMeninaIdadeQuatroImcVinte() {
+
+		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "feminino", 4));
+	}
+	
+	// Idade 6
+	@Test
+	public void testeMeninaIdadeSeisImcQuatorze() {
+		Assert.assertEquals("Baixo peso", calc.calcularImc(1.110, 17.25, "feminino", 6));
+	}
+
+	@Test
+	public void testeMeninaIdadeSeisImcDezesseis() {
+		Assert.assertEquals("Peso normal", calc.calcularImc(1.14, 20.82, "feminino", 6));
+	}
+
+	@Test
+	public void testeMeninaIdadeSeisImcDezoito() {
+
+		Assert.assertEquals("Sobrepeso", calc.calcularImc(1.10, 21.79, "feminino", 6));
+	}
+
+	@Test
+	public void testeMeninaIdadeSeisImcVinte() {
+
+		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "feminino", 6));
+	}
+	
+	// Idade 8
+	@Test
+	public void testeMeninaIdadeOitoImcQuatorze() {
+		Assert.assertEquals("Baixo peso", calc.calcularImc(1.110, 17.25, "feminino", 8));
+	}
+
+	@Test
+	public void testeMeninaIdadeOitoImcDezesseis() {
+		Assert.assertEquals("Peso normal", calc.calcularImc(1.14, 20.82, "feminino", 8));
+	}
+
+	@Test
+	public void testeMeninaIdadeOitoImcDezoito() {
+
+		Assert.assertEquals("Sobrepeso", calc.calcularImc(1.10, 21.79, "feminino", 8));
+	}
+
+	@Test
+	public void testeMeninaIdadeOitoImcVinte() {
+
+		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "feminino", 8));
+	}
+	
+	// Idade 10
+	@Test
+	public void testeMeninaIdadeDezImcQuatorze() {
+		Assert.assertEquals("Baixo peso", calc.calcularImc(1.110, 17.25, "feminino", 10));
+	}
+
+	@Test
+	public void testeMeninaIdadeDezImcDezesseis() {
+		Assert.assertEquals("Peso normal", calc.calcularImc(1.14, 20.82, "feminino", 10));
+	}
+
+	@Test
+	public void testeMeninaIdadeDezImcDezoito() {
+
+		Assert.assertEquals("Sobrepeso", calc.calcularImc(1.10, 21.79, "feminino", 10));
+	}
+
+	@Test
+	public void testeMeninaIdadeDezImcVinte() {
+
+		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "feminino", 10));
+	}
+	
+	// Idade 12
+	@Test
+	public void testeMeninaIdadeDozeImcQuatorze() {
+		Assert.assertEquals("Baixo peso", calc.calcularImc(1.110, 17.25, "feminino", 12));
+	}
+
+	@Test
+	public void testeMeninaIdadeDozeImcDezesseis() {
+		Assert.assertEquals("Peso normal", calc.calcularImc(1.14, 20.82, "feminino", 12));
+	}
+
+	@Test
+	public void testeMeninaIdadeDozeImcDezoito() {
+
+		Assert.assertEquals("Sobrepeso", calc.calcularImc(1.10, 21.79, "feminino", 12));
+	}
+
+	@Test
+	public void testeMeninaIdadeDozeImcVinte() {
+
+		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "feminino", 12));
+	}
+	
+	// Idade 14
+	@Test
+	public void testeMeninaIdadeQuatorzeImcQuatorze() {
+		Assert.assertEquals("Baixo peso", calc.calcularImc(1.110, 17.25, "feminino", 14));
+	}
+
+	@Test
+	public void testeMeninaIdadeQuatorzeImcDezesseis() {
+		Assert.assertEquals("Peso normal", calc.calcularImc(1.14, 20.82, "feminino", 14));
+	}
+
+	@Test
+	public void testeMeninaIdadeQuatorzeImcDezoito() {
+
+		Assert.assertEquals("Sobrepeso", calc.calcularImc(1.10, 21.79, "feminino", 14));
+	}
+
+	@Test
+	public void testeMeninaIdadeQuatorzeImcVinte() {
+
+		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "feminino", 14));
+	}
+	
+	// Idade 16
+	@Test
+	public void testeMeninaIdadeDezesseisImcQuatorze() {
+		Assert.assertEquals("Baixo peso", calc.calcularImc(1.110, 17.25, "feminino", 16));
+	}
+
+	@Test
+	public void testeMeninaIdadeDezesseisImcDezesseis() {
+		Assert.assertEquals("Peso normal", calc.calcularImc(1.14, 20.82, "feminino", 16));
+	}
+
+	@Test
+	public void testeMeninaIdadeDezesseisImcDezoito() {
+
+		Assert.assertEquals("Sobrepeso", calc.calcularImc(1.10, 21.79, "feminino", 16));
+	}
+
+	@Test
+	public void testeMeninaIdadeDezesseisImcVinte() {
+
+		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "feminino", 16));
+	}
+	
+	// Idade 18
+	@Test
+	public void testeMeninaIdadeDezoitoImcQuatorze() {
+		Assert.assertEquals("Baixo peso", calc.calcularImc(1.110, 17.25, "feminino", 18));
+	}
+
+	@Test
+	public void testeMeninaIdadeDezoitoImcDezesseis() {
+		Assert.assertEquals("Peso normal", calc.calcularImc(1.14, 20.82, "feminino", 18));
+	}
+
+	@Test
+	public void testeMeninaIdadeDezoitoImcDezoito() {
+
+		Assert.assertEquals("Sobrepeso", calc.calcularImc(1.10, 21.79, "feminino", 18));
+	}
+
+	@Test
+	public void testeMeninaIdadeDezoitoImcVinte() {
+
+		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "feminino", 18));
+	}
+	
+	// Idade 20
+	@Test
+	public void testeMeninaIdadeVinteImcQuatorze() {
+		Assert.assertEquals("Baixo peso", calc.calcularImc(1.110, 17.25, "feminino", 20));
+	}
+
+	@Test
+	public void testeMeninaIdadeVinteImcDezesseis() {
+		Assert.assertEquals("Peso normal", calc.calcularImc(1.14, 20.82, "feminino", 20));
+	}
+
+	@Test
+	public void testeMeninaIdadeVinteImcDezoito() {
+
+		Assert.assertEquals("Sobrepeso", calc.calcularImc(1.10, 21.79, "feminino", 20));
+	}
+
+	@Test
+	public void testeMeninaIdadeVinteImcVinte() {
+
+		Assert.assertEquals("Obesidade", calc.calcularImc(1.13, 25.55, "feminino", 20));
+	}
 }

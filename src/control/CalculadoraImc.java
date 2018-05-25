@@ -5,8 +5,8 @@ public class CalculadoraImc {
 
 		double imc = peso / (altura * altura);
 
-		// Testes para Idosos homens acima de 65 anos
 		// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		// Testes para Idosos homens acima de 65 anos
 
 		// testeIdosoHomemBaixoPeso
 		if (imc < 21.9 && sexo.equals("masculino") && idade > 65) {
@@ -42,8 +42,8 @@ public class CalculadoraImc {
 			return "Obesidade grau III (obesidade mórbida)";
 		}
 
-		// Testes para Idosas mulheres acima de 65 anos
 		// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		// Testes para Idosas mulheres acima de 65 anos
 
 		// testeIdosaMulherBaixoPeso
 		else if (imc <= 21.9 && sexo.equals("feminino") && idade > 65) {
@@ -81,8 +81,8 @@ public class CalculadoraImc {
 			return "Obesidade grau III (obesidade mórbida)";
 		}
 
-		// Índice de massa corporal para adultos entre 20 e 65 anos
 		// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		// Índice de massa corporal para adultos entre 20 e 65 anos
 
 		// testeAdultoBaixoPesoMuitoGrave
 		else if (imc < 16 && idade > 20 && idade <= 65 && (sexo.equals("masculino") || sexo.equals("feminino"))) {
@@ -136,24 +136,21 @@ public class CalculadoraImc {
 
 			return "Obesidade grau III (obesidade mórbida)";
 		}
-
+		
+		// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		// Índice de massa corporal para Meninos
+		
 		// testeMeninoBaixoPeso
-		else if (imc >= 14 && imc <= 14.1 && sexo.equals("masculino") && idade == 2)
-
-		{
+		else if (imc >= 14 && imc <= 14.1 && sexo.equals("masculino") && idade == 2){
 
 			return "Baixo peso";
 		}
 		// testeMeninoIdadeDoisImcDezesseis
-		else if (imc >= 16 && imc <= 16.1 && sexo.equals("masculino") && idade == 2)
-
-		{
+		else if (imc >= 16 && imc <= 16.1 && sexo.equals("masculino") && idade == 2){
 			return "Peso normal";
 		}
-		// testeMeninoIdadeDoisImcDezoite
-		else if (imc >= 18 && imc <= 18.1 && sexo.equals("masculino") && idade == 2)
-
-		{
+		// testeMeninoIdadeDoisImcDezoito
+		else if (imc >= 18 && imc <= 18.1 && sexo.equals("masculino") && idade == 2){
 
 			return "Sobrepeso";
 		}
@@ -166,25 +163,19 @@ public class CalculadoraImc {
 			return "Obesidade";
 		}
 		// testeMeninoIdadeQuatroImcQuatorze
-		else if (imc >= 14 && imc <= 14.1 && sexo.equals("masculino") && idade == 4)
-
-		{
+		else if (imc >= 14 && imc <= 14.1 && sexo.equals("masculino") && idade == 4){
 
 			return "Baixo peso";
 		}
 
 		// testeMeninoIdadeQuatroImcDezesseis
-		else if (imc >= 16 && imc <= 16.1 && sexo.equals("masculino") && idade == 4)
-
-		{
+		else if (imc >= 16 && imc <= 16.1 && sexo.equals("masculino") && idade == 4){
 
 			return "Peso normal";
 		}
 
 		// testeMeninoIdadeQuatroImcDezoito
-		else if (imc >= 18 && imc <= 18.1 && sexo.equals("masculino") && idade == 4)
-
-		{
+		else if (imc >= 18 && imc <= 18.1 && sexo.equals("masculino") && idade == 4){
 
 			return "Sobrepeso";
 		}
@@ -340,6 +331,260 @@ public class CalculadoraImc {
 		else if (imc >= 20 && imc <= 20.1 && sexo.equals("masculino") && idade == 20) {
 			return "Obesidade";
 		}
+
+		// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		// Índice de massa corporal para Meninas
+		
+		// testeMeninaBaixoPeso
+		// Idade 2
+		else if (imc >= 14 && imc <= 14.1 && sexo.equals("feminino") && idade == 2) {
+
+			return "Baixo peso";
+		}
+
+		// testeMeninaPesoNormal
+		else if (imc >= 16 && imc <= 16.1 && sexo.equals("feminino") && idade == 2) {
+
+			return "Peso normal";
+		}
+
+		// testeMeninaSobrepeso
+		else if (imc >= 18 && imc <= 18.1 && sexo.equals("feminino") && idade == 2) {
+
+			return "Sobrepeso";
+		}
+
+		// testeMeninaObesidade
+		else if (imc >= 20 && imc <= 20.1 && sexo.equals("feminino") && idade == 2) {
+
+			return "Obesidade";
+		}
+
+		// testeMeninaBaixoPeso
+		// Idade 4
+		else if (imc >= 14 && imc <= 14.1 && sexo.equals("feminino") && idade == 4) {
+
+			return "Baixo peso";
+		}
+
+		// testeMeninaPesoNormal
+		else if (imc >= 16 && imc <= 16.1 && sexo.equals("feminino") && idade == 4) {
+
+			return "Peso normal";
+		}
+
+		// testeMeninaSobrepeso
+		else if (imc >= 18 && imc <= 18.1 && sexo.equals("feminino") && idade == 4) {
+
+			return "Sobrepeso";
+		}
+
+		// testeMeninaObesidade
+		else if (imc >= 20 && imc <= 20.1 && sexo.equals("feminino") && idade == 4) {
+
+			return "Obesidade";
+		}
+
+		// testeMeninaBaixoPeso
+		// Idade 6
+		else if (imc >= 14 && imc <= 14.1 && sexo.equals("feminino") && idade == 6) {
+
+			return "Baixo peso";
+		}
+
+		// testeMeninaPesoNormal
+		else if (imc >= 16 && imc <= 16.1 && sexo.equals("feminino") && idade == 6) {
+
+			return "Peso normal";
+		}
+
+		// testeMeninaSobrepeso
+		else if (imc >= 18 && imc <= 18.1 && sexo.equals("feminino") && idade == 6) {
+
+			return "Sobrepeso";
+		}
+
+		// testeMeninaObesidade
+		else if (imc >= 20 && imc <= 20.1 && sexo.equals("feminino") && idade == 6) {
+
+			return "Obesidade";
+		}
+
+		// testeMeninaBaixoPeso
+		// Idade 8
+		else if (imc >= 14 && imc <= 14.1 && sexo.equals("feminino") && idade == 8) {
+
+			return "Baixo peso";
+		}
+
+		// testeMeninaPesoNormal
+		else if (imc >= 16 && imc <= 16.1 && sexo.equals("feminino") && idade == 8) {
+
+			return "Peso normal";
+		}
+
+		// testeMeninaSobrepeso
+		else if (imc >= 18 && imc <= 18.1 && sexo.equals("feminino") && idade == 8) {
+
+			return "Sobrepeso";
+		}
+
+		// testeMeninaObesidade
+		else if (imc >= 20 && imc <= 20.1 && sexo.equals("feminino") && idade == 8) {
+
+			return "Obesidade";
+		}
+
+		// testeMeninaBaixoPeso
+		// Idade 10
+		else if (imc >= 14 && imc <= 14.1 && sexo.equals("feminino") && idade == 10) {
+
+			return "Baixo peso";
+		}
+
+		// testeMeninaPesoNormal
+		else if (imc >= 16 && imc <= 16.1 && sexo.equals("feminino") && idade == 10) {
+
+			return "Peso normal";
+		}
+
+		// testeMeninaSobrepeso
+		else if (imc >= 18 && imc <= 18.1 && sexo.equals("feminino") && idade == 10) {
+
+			return "Sobrepeso";
+		}
+
+		// testeMeninaObesidade
+		else if (imc >= 20 && imc <= 20.1 && sexo.equals("feminino") && idade == 10) {
+
+			return "Obesidade";
+		}
+
+		// testeMeninaBaixoPeso
+		// Idade 12
+		else if (imc >= 14 && imc <= 14.1 && sexo.equals("feminino") && idade == 12) {
+
+			return "Baixo peso";
+		}
+
+		// testeMeninaPesoNormal
+		else if (imc >= 16 && imc <= 16.1 && sexo.equals("feminino") && idade == 12) {
+
+			return "Peso normal";
+		}
+
+		// testeMeninaSobrepeso
+		else if (imc >= 18 && imc <= 18.1 && sexo.equals("feminino") && idade == 12) {
+
+			return "Sobrepeso";
+		}
+
+		// testeMeninaObesidade
+		else if (imc >= 20 && imc <= 20.1 && sexo.equals("feminino") && idade == 12) {
+
+			return "Obesidade";
+		}
+
+		// testeMeninaBaixoPeso
+		// Idade 14
+		else if (imc >= 14 && imc <= 14.1 && sexo.equals("feminino") && idade == 14) {
+
+			return "Baixo peso";
+		}
+
+		// testeMeninaPesoNormal
+		else if (imc >= 16 && imc <= 16.1 && sexo.equals("feminino") && idade == 14) {
+
+			return "Peso normal";
+		}
+
+		// testeMeninaSobrepeso
+		else if (imc >= 18 && imc <= 18.1 && sexo.equals("feminino") && idade == 14) {
+
+			return "Sobrepeso";
+		}
+
+		// testeMeninaObesidade
+		else if (imc >= 20 && imc <= 20.1 && sexo.equals("feminino") && idade == 14) {
+
+			return "Obesidade";
+		}
+
+		// testeMeninaBaixoPeso
+		// Idade 16
+		else if (imc >= 14 && imc <= 14.1 && sexo.equals("feminino") && idade == 16) {
+
+			return "Baixo peso";
+		}
+
+		// testeMeninaPesoNormal
+		else if (imc >= 16 && imc <= 16.1 && sexo.equals("feminino") && idade == 16) {
+
+			return "Peso normal";
+		}
+
+		// testeMeninaSobrepeso
+		else if (imc >= 18 && imc <= 18.1 && sexo.equals("feminino") && idade == 16) {
+
+			return "Sobrepeso";
+		}
+
+		// testeMeninaObesidade
+		else if (imc >= 20 && imc <= 20.1 && sexo.equals("feminino") && idade == 16) {
+
+			return "Obesidade";
+		}
+
+		// testeMeninaBaixoPeso
+		// Idade 18
+		else if (imc >= 14 && imc <= 14.1 && sexo.equals("feminino") && idade == 18) {
+
+			return "Baixo peso";
+		}
+
+		// testeMeninaPesoNormal
+		else if (imc >= 16 && imc <= 16.1 && sexo.equals("feminino") && idade == 18) {
+
+			return "Peso normal";
+		}
+
+		// testeMeninaSobrepeso
+		else if (imc >= 18 && imc <= 18.1 && sexo.equals("feminino") && idade == 18) {
+
+			return "Sobrepeso";
+		}
+
+		// testeMeninaObesidade
+		else if (imc >= 20 && imc <= 20.1 && sexo.equals("feminino") && idade == 18) {
+
+			return "Obesidade";
+		}
+
+		// testeMeninaBaixoPeso
+		// Idade 20
+		else if (imc >= 14 && imc <= 14.1 && sexo.equals("feminino") && idade == 20) {
+
+			return "Baixo peso";
+		}
+
+		// testeMeninaPesoNormal
+		else if (imc >= 16 && imc <= 16.1 && sexo.equals("feminino") && idade == 20) {
+
+			return "Peso normal";
+		}
+
+		// testeMeninaSobrepeso
+		else if (imc >= 18 && imc <= 18.1 && sexo.equals("feminino") && idade == 20) {
+
+			return "Sobrepeso";
+		}
+
+		// testeMeninaObesidade
+		else if (imc >= 20 && imc <= 20.1 && sexo.equals("feminino") && idade == 20) {
+
+			return "Obesidade";
+		}
+
 		// Condição de saída
 		else
 
